@@ -1,0 +1,47 @@
+.container{  
+    text-align: center;
+ }
+
+ button {
+    --color: #0077ff;
+    font-family: inherit;
+    display: inline-block;
+    width: 10em;
+    height: 2.7em;
+    line-height: 2.5em;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 50px;
+    font-size: 17px;
+    z-index: 1;
+    color: var(--color);
+    border: 12px solid var(--color);
+    border-radius: 12px;
+    position: relative;
+  }
+  
+  button::before {
+    position: absolute;
+    content: "";
+    background: var(--color);
+    width: 150px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+  }
+  
+  button:hover {
+    color: white;
+  }
+  
+  button:before {
+    top: 100%;
+    left: 100%;
+    transition: 0.3s all;
+  }
+  
+  button:hover::before {
+    top: -30px;
+    left: -30px;
+  }
+  
